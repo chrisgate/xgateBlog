@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;
+charset=utf-8">
+<meta name="viewport" content="user-scalable=no,
+initial-scale=1, maximum-scale=1, minimum-scale=1,
+width=device-width;" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+<script type="text/javascript" charset="utf-8"
+src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8"
+src="js/jquery.mobile-1.4.2.min.js"></script>
+<script type="text/javascript" charset="utf-8"
+src="js/myscript.js"></script>
+<link rel="stylesheet" href="css/mystyle.css" />
+<script type="text/javascript" charset="utf-8"
+src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+function onBodyLoad() {
+document.addEventListener("deviceready", onDeviceReady,
+false);
+}
+function onDeviceReady() {
+//Replace it with specific information about the device
+//running the application
+listPosts(data);
+showPost(id);
+}
+</script>
+</head>
+<body >
+<!--Page: Home-->
+     <div id="home" 
+     data-role="page" 
+     data-theme="a"
+     data-title="ChrisGate: Home" >
+         <div data-role="header" data-position="fixed"> <!--header-->
+              <h1>Home</h1>
+             <a href="#info" 
+             data-icon="info" 
+             data-iconpos="notext"
+             data-rel="dialog"
+             class="ui-btn-right"
+             >Info</a>
+         </div><!--header-->
+           <div data-role="content">
+              <img src="img/MadeinNaija_logo.png" alt="Chrisgate logo"/>
+           </div>
+             <div data-role="controlgroup">
+                   <a href="#blog" 
+                    data-role="button"
+                    data-icon="vs_blog"
+                   >Blog</a>
+                   <a href="#photos" 
+                    data-role="button"
+                    data-icon="vs_photos"
+                   >Photos</a>
+                   <a href="#facebook" 
+                   data-role="button"
+                    data-icon="vs_facebook"
+                   >Facebook</a>
+                   <a href="#tweets" 
+                   data-role="button"
+                   data-icon="vs_twitter"
+                   >Tweets</a>
+               </div><!--links-->
+    </div><!--page-->
+     
+     <!--Page: Blog-->
+    <div id="blog" 
+    data-role="page" 
+    data-theme="a"
+    data-title="ChrisGate: Blog">
+         <div data-role="header" data-position="fixed">
+             <h1>Blog</h1>
+             <a href="#home" 
+             data-icon="home" 
+             data-iconpos="notext"
+             >Home</a>
+             <a href="#info" 
+             data-icon="info" 
+             data-iconpos="notext"
+             data-rel="dialog"
+             >Info</a>
+          </div><!--header-->
+           <div data-role="content" id="postlist">
+              <!-- Sample Content -->
+              
+           </div>
+             
+                 <div data-role="footer" 
+                 data-position="fixed"
+                 data-id="vs_footer">
+                 <div data-role="navbar" >
+                     <ul>
+                         <li><a href="#home" 
+                            data-role="button"
+                            data-icon="home"
+                           >Home</a></li>
+                         <li><a href="#" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Blog</a></li>
+                         <li><a href="#photos" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Photos</a></li>
+                         <li><a href="#facebook" 
+                           data-role="button"
+                            data-icon="arrow-r"
+                           >Facebook</a></li>
+                         <li> <a href="#tweets" 
+                           data-role="button"
+                           data-icon="arrow-r"
+                           >Tweets</a></li>
+                       </ul>
+                 </div>
+                   
+               </div><!--footer-->
+    </div><!--page-->
+    
+    <div id="blogpost"
+        data-role="page">
+        <div data-role="header"
+            data-position="fixed"
+            data-theme="a">
+            <a href="#blog"
+                data-icon="back"
+                data-iconpos="notext"
+                data-direction="reverse">Videos</a>
+            <h1>Post</h1>
+        </div><!-- header-->
+        <div data-role="content">
+            <div id="mypost"></div>
+        </div><!-- content -->
+    </div><!-- page -->
+    
+    <!--Page: Photos-->
+    <div id="photos" 
+    data-role="page" 
+    data-theme="a"
+    data-title="ChrisGate: Photos">
+         <div data-role="header" data-position="fixed">
+             <h1>Photos</h1>
+             <a href="#home" 
+             data-icon="home" 
+             data-iconpos="notext"
+             >Home</a>
+             <a href="#info" 
+             data-icon="info" 
+             data-iconpos="notext"
+             data-rel="dialog"
+             >Info</a>
+          </div><!--header-->
+             <p>Photos Page</p>
+                 <div data-role="footer" 
+                 data-position="fixed"
+                 data-id="vs_footer">
+                 <div data-role="navbar" >
+                     <ul>
+                         <li><a href="#home" 
+                            data-role="button"
+                            data-icon="home"
+                           >Home</a></li>
+                         <li><a href="#blog" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Blog</a></li>
+                         <li><a href="#" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Photos</a></li>
+                         <li><a href="#facebook" 
+                           data-role="button"
+                            data-icon="arrow-r"
+                           >Facebook</a></li>
+                         <li> <a href="#tweets" 
+                           data-role="button"
+                           data-icon="arrow-r"
+                           >Tweets</a></li>
+                       </ul>
+                 </div>
+                   
+               </div><!--footer-->
+    </div><!--page-->
+    
+    <!--Page: Facebook-->
+    <div id="facebook" 
+    data-role="page"
+    data-theme="a" 
+    data-title="ChrisGate: Facebook">
+         <div data-role="header" data-position="fixed">
+             <h1>Facebook</h1>
+             <a href="#home" 
+             data-icon="home" 
+             data-iconpos="notext"
+             >Home</a>
+             <a href="#info" 
+             data-icon="info" 
+             data-iconpos="notext"
+             data-rel="dialog"
+             >Info</a>
+          </div><!--header-->
+             <p>Facebook Page</p>
+                 <div data-role="footer" 
+                 data-position="fixed"
+                 data-id="vs_footer">
+                 <div data-role="navbar" >
+                     <ul>
+                         <li><a href="#home" 
+                            data-role="button"
+                            data-icon="home"
+                           >Home</a></li>
+                         <li><a href="#blog" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Blog</a></li>
+                         <li><a href="#photos" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Photos</a></li>
+                         <li><a href="#" 
+                           data-role="button"
+                            data-icon="arrow-r"
+                           >Facebook</a></li>
+                         <li> <a href="#tweets" 
+                           data-role="button"
+                           data-icon="arrow-r"
+                           >Tweets</a></li>
+                       </ul>
+                 </div>
+                   
+               </div><!--footer-->
+    </div><!--page-->
+    
+    <!--Page: Tweets-->
+    <div id="tweets" 
+    data-role="page" 
+    data-theme="a"
+    data-title="ChrisGate: Tweets">
+         <div data-role="header" data-position="fixed">
+             <h1>Tweets</h1>
+             <a href="#home" 
+             data-icon="home" 
+             data-iconpos="notext"
+             >Home</a>
+             <a href="#info" 
+             data-icon="info" 
+             data-iconpos="notext"
+             data-rel="dialog"
+             >Info</a>
+          </div><!--header-->
+             <p>Tweets Page</p>
+                 <div data-role="footer" 
+                 data-position="fixed"
+                 data-id="vs_footer">
+                 <div data-role="navbar" >
+                     <ul>
+                         <li><a href="#home" 
+                            data-role="button"
+                            data-icon="home"
+                           >Home</a></li>
+                         <li><a href="#blog" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Blog</a></li>
+                         <li><a href="#photos" 
+                            data-role="button"
+                            data-icon="arrow-r"
+                           >Photos</a></li>
+                         <li><a href="#facebook" 
+                           data-role="button"
+                            data-icon="arrow-r"
+                           >Facebook</a></li>
+                         <li> <a href="#" 
+                           data-role="button"
+                           data-icon="arrow-r"
+                           >Tweets</a></li>
+                       </ul>
+                 </div>
+                   
+               </div><!--footer-->
+    </div><!--page-->
+    
+    <div data-role="page" 
+    data-theme="a"
+    id="info">
+          <div data-role="header">
+          <h1>App Info.</h1>
+          </div>
+          <div data-role="content">
+          <p>This app will pulll content from web server and display it accordly ;Content from blog website,Photos from Flickr,feeds from facebook and tweets from twitter</p>
+          <a href="#"
+          data-role="button"
+          data-inline="true"
+          data-rel="back"
+          >cancel</a>
+          <a href="#home"
+          data-role="button"
+          data-inline="true"
+          >home</a>
+          
+          </div><!--header-->
+    </div><!--page-->
+    
+    <script src="http://hearthisnaija.com/?json=get_recent_posts&callback=listPosts" type="text/javascript"></script>
+</body>
+</html>

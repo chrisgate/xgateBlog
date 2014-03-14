@@ -1,0 +1,43 @@
+body{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	}
+#home {
+	text-align:center;
+	}
+#home img {
+width:60%;
+max-width:200px;
+}
+#home .ui-controlgroup {
+	width:60%;
+	max-width:250px;
+	margin-top:20px;
+	margin:0 auto;
+	}
+.ui-icon-vs_blog{
+	
+	background-image: url(../img/icon_blog.png);
+	background-repeat: no-repeat;
+	background-position:12px center;
+	background-clip: padding-box;
+	
+}
+
+#mypost img a{
+    
+}
+.ui-icon-vs_photos{
+	background-image: url(../img/icon_photo.png);
+	background-repeat: no-repeat;
+	background-position:12px center;
+}
+.ui-icon-vs_facebook{
+	background-image: url(../img/icon.png);
+	background-repeat: no-repeat;
+	background-position:12px center;
+}
+.ui-icon-vs_twitter{
+	background-image: url(../img/icon_twitter.png);
+	background-repeat: no-repeat;
+	background-position:12px center;
+}
